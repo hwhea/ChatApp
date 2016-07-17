@@ -1,0 +1,212 @@
+//Variables
+$bg: #F2F2F2
+$primary: #5FA2DE
+$secondary: #979797
+$high: #16CEEF
+$receive: #E3EFF9
+$w: white
+
+//global stuff
+html, body
+  font-family: Avenir-Book, sans-serif
+  background: $bg
+  color: black
+h1
+  color: $primary
+
+.popup
+  display: none
+
+.illusion
+  position: fixed
+  width: 100%
+  background-color: $w
+  height: 4.4em
+  border-bottom: 0.2em solid $primary
+  box-shadow: -4px 4px 4px 0px rgba(0,0,0,0.23)
+  z-index: 1000
+
+.messages-container
+  margin-top: 5em
+  width: 100%
+  height: 100%
+
+//media queries
+
+
+//app
+.app
+  width: 80vw
+  height: 100%
+  margin: 0 auto 0 10vw
+  max-width: 800px
+  min-width: 420px
+  .sidebar
+    right: 0
+    height: 100vh
+    position: fixed
+    width: 20vw
+    background-color: white
+    top: 0
+    padding: 4em
+    padding-top: 4.9em
+    box-shadow: -7px 4px 4px 0px rgba(0,0,0,0.23)
+    h1
+      color: $secondary
+      font-weight: 100
+      line-height: 2em
+    h2
+      color: $secondary
+      font-weight: 100
+      line-height: 2em
+    p
+      color: $secondary
+
+  .send
+    background: $w
+    border-bottom: 0.2em solid $primary
+    padding: 1em 1em 0em 1em
+    margin: 0 0 2em 0
+    position: fixed
+    width: 80vw
+    max-width: 800px
+    min-width: 400px
+    max-height: 4.4em
+    z-index: 1000
+    .tb-integrate
+      font-size: 1em
+      border: none
+      outline: none
+      resize: none
+      width: 70%
+    .controls
+      float: right
+      text-align: center
+      .send-btn
+        background-color: $primary
+        border: none
+        padding: .3em 2em
+        color: white
+        font-weight: bold
+        transition: background .4s ease-in-out
+        margin-top: 0.3em
+        &:hover
+          background-color: $high
+          cursor: pointer
+      .addlink
+        font-size: .7em
+        font-weight: bold
+        color: $high
+        text-align: center
+    .notify
+      background-color: $primary
+      width: 50%
+      position: fixed
+      padding: 1em
+      color: white
+      display: none
+      max-width: 800px
+    .notify.bad
+      background: darkred
+    .notify.good
+      background: $primary
+  .msg-push
+    height: 6em
+  .cbox
+    margin-bottom: 3em
+    display: block
+    .content
+      background: $w
+      box-shadow: -4px 4px 4px 0px rgba(0,0,0,0.23)
+      border-radius: 12px 12px 12px 0px
+      overflow: auto
+      display: inline-block
+      min-width: 20em
+      padding-right: 1em
+      .pic
+        width: 40px
+        height: 40px
+        border-radius: 100%
+        overflow: hidden
+        float: left
+        margin: 1em
+        img
+          height: 100%
+      .message
+        color: $secondary
+        font-size: 0.9em
+        line-height: 1.6em
+    .time
+      font-size: 0.6em
+      font-weight: bold
+      color: $secondary
+      clear: both
+
+  .cbox.receive
+    text-align: right
+    .content
+      background: $receive
+      border-radius: 12px 12px 0px 12px
+      text-align: right
+      padding-left: 1em
+      padding-right: 0
+      .pic
+        float: right
+    .time
+      text-align: right
+
+  .cbox.file
+    position: relative
+    margin: 3em 0
+    clear: both
+    .content
+      max-width: 70%
+      overflow: hidden
+      .message
+        max-width: 60%
+        display: inline-block
+      .preview
+        width: 8em
+        border-radius: .5em
+        position: absolute
+        overflow: hidden
+        box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50)
+        display: inline
+        margin-left: 1em
+        top: -1em
+        img
+          width: 100%
+    .view
+      display: block
+      padding: 1em 1.5em
+      text-decoration: none
+      font-weight: bold
+      transition: background .4s ease-in-out
+      width: 110%
+      color: white
+      background-color: $primary
+      img
+        margin-right: 1em
+        vertical-align: middle
+      &:hover
+        background-color: $high
+
+//MEDIA QUERIES
+@media (max-width:1000px)
+  .sidebar
+    display: none
+
+@media only screen and (max-width: 1000px)
+  .app
+    margin: 0 auto 0 auto
+
+@media only screen and (min-width: 500px)
+  .content
+    min-width: 15em
+    margin: 0 auto
+
+@media only screen and (max-width: 500px)
+  .preview img
+    display: none
+  .app
+    margin: 0

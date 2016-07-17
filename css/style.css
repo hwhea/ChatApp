@@ -1,0 +1,284 @@
+/* line 10, ../sass/style.sass */
+html, body {
+  font-family: Avenir-Book, sans-serif;
+  background: #F2F2F2;
+  color: black;
+}
+
+/* line 14, ../sass/style.sass */
+h1 {
+  color: #5FA2DE;
+}
+
+/* line 17, ../sass/style.sass */
+.popup {
+  display: none;
+}
+
+/* line 20, ../sass/style.sass */
+.illusion {
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  height: 4.4em;
+  border-bottom: 0.2em solid #5FA2DE;
+  box-shadow: -4px 4px 4px 0px rgba(0, 0, 0, 0.23);
+  z-index: 1000;
+}
+
+/* line 29, ../sass/style.sass */
+.messages-container {
+  margin-top: 5em;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 38, ../sass/style.sass */
+.app {
+  width: 80vw;
+  height: 100%;
+  margin: 0 auto 0 10vw;
+  max-width: 800px;
+  min-width: 420px;
+}
+/* line 44, ../sass/style.sass */
+.app .sidebar {
+  right: 0;
+  height: 100vh;
+  position: fixed;
+  width: 20vw;
+  background-color: white;
+  top: 0;
+  padding: 4em;
+  padding-top: 4.9em;
+  box-shadow: -7px 4px 4px 0px rgba(0, 0, 0, 0.23);
+}
+/* line 54, ../sass/style.sass */
+.app .sidebar h1 {
+  color: #979797;
+  font-weight: 100;
+  line-height: 2em;
+}
+/* line 58, ../sass/style.sass */
+.app .sidebar h2 {
+  color: #979797;
+  font-weight: 100;
+  line-height: 2em;
+}
+/* line 62, ../sass/style.sass */
+.app .sidebar p {
+  color: #979797;
+}
+/* line 65, ../sass/style.sass */
+.app .send {
+  background: white;
+  border-bottom: 0.2em solid #5FA2DE;
+  padding: 1em 1em 0em 1em;
+  margin: 0 0 2em 0;
+  position: fixed;
+  width: 80vw;
+  max-width: 800px;
+  min-width: 400px;
+  max-height: 4.4em;
+  z-index: 1000;
+}
+/* line 76, ../sass/style.sass */
+.app .send .tb-integrate {
+  font-size: 1em;
+  border: none;
+  outline: none;
+  resize: none;
+  width: 70%;
+}
+/* line 82, ../sass/style.sass */
+.app .send .controls {
+  float: right;
+  text-align: center;
+}
+/* line 85, ../sass/style.sass */
+.app .send .controls .send-btn {
+  background-color: #5FA2DE;
+  border: none;
+  padding: 0.3em 2em;
+  color: white;
+  font-weight: bold;
+  transition: background 0.4s ease-in-out;
+  margin-top: 0.3em;
+}
+/* line 93, ../sass/style.sass */
+.app .send .controls .send-btn:hover {
+  background-color: #16CEEF;
+  cursor: pointer;
+}
+/* line 96, ../sass/style.sass */
+.app .send .controls .addlink {
+  font-size: 0.7em;
+  font-weight: bold;
+  color: #16CEEF;
+  text-align: center;
+}
+/* line 101, ../sass/style.sass */
+.app .send .notify {
+  background-color: #5FA2DE;
+  width: 50%;
+  position: fixed;
+  padding: 1em;
+  color: white;
+  display: none;
+  max-width: 800px;
+}
+/* line 109, ../sass/style.sass */
+.app .send .notify.bad {
+  background: darkred;
+}
+/* line 111, ../sass/style.sass */
+.app .send .notify.good {
+  background: #5FA2DE;
+}
+/* line 113, ../sass/style.sass */
+.app .msg-push {
+  height: 6em;
+}
+/* line 115, ../sass/style.sass */
+.app .cbox {
+  margin-bottom: 3em;
+  display: block;
+}
+/* line 118, ../sass/style.sass */
+.app .cbox .content {
+  background: white;
+  box-shadow: -4px 4px 4px 0px rgba(0, 0, 0, 0.23);
+  border-radius: 12px 12px 12px 0px;
+  overflow: auto;
+  display: inline-block;
+  min-width: 20em;
+  padding-right: 1em;
+}
+/* line 126, ../sass/style.sass */
+.app .cbox .content .pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  overflow: hidden;
+  float: left;
+  margin: 1em;
+}
+/* line 133, ../sass/style.sass */
+.app .cbox .content .pic img {
+  height: 100%;
+}
+/* line 135, ../sass/style.sass */
+.app .cbox .content .message {
+  color: #979797;
+  font-size: 0.9em;
+  line-height: 1.6em;
+}
+/* line 139, ../sass/style.sass */
+.app .cbox .time {
+  font-size: 0.6em;
+  font-weight: bold;
+  color: #979797;
+  clear: both;
+}
+/* line 145, ../sass/style.sass */
+.app .cbox.receive {
+  text-align: right;
+}
+/* line 147, ../sass/style.sass */
+.app .cbox.receive .content {
+  background: #E3EFF9;
+  border-radius: 12px 12px 0px 12px;
+  text-align: right;
+  padding-left: 1em;
+  padding-right: 0;
+}
+/* line 153, ../sass/style.sass */
+.app .cbox.receive .content .pic {
+  float: right;
+}
+/* line 155, ../sass/style.sass */
+.app .cbox.receive .time {
+  text-align: right;
+}
+/* line 158, ../sass/style.sass */
+.app .cbox.file {
+  position: relative;
+  margin: 3em 0;
+  clear: both;
+}
+/* line 162, ../sass/style.sass */
+.app .cbox.file .content {
+  max-width: 70%;
+  overflow: hidden;
+}
+/* line 165, ../sass/style.sass */
+.app .cbox.file .content .message {
+  max-width: 60%;
+  display: inline-block;
+}
+/* line 168, ../sass/style.sass */
+.app .cbox.file .content .preview {
+  width: 8em;
+  border-radius: 0.5em;
+  position: absolute;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+  display: inline;
+  margin-left: 1em;
+  top: -1em;
+}
+/* line 177, ../sass/style.sass */
+.app .cbox.file .content .preview img {
+  width: 100%;
+}
+/* line 179, ../sass/style.sass */
+.app .cbox.file .view {
+  display: block;
+  padding: 1em 1.5em;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.4s ease-in-out;
+  width: 110%;
+  color: white;
+  background-color: #5FA2DE;
+}
+/* line 188, ../sass/style.sass */
+.app .cbox.file .view img {
+  margin-right: 1em;
+  vertical-align: middle;
+}
+/* line 191, ../sass/style.sass */
+.app .cbox.file .view:hover {
+  background-color: #16CEEF;
+}
+
+@media (max-width: 1000px) {
+  /* line 196, ../sass/style.sass */
+  .sidebar {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  /* line 200, ../sass/style.sass */
+  .app {
+    margin: 0 auto 0 auto;
+  }
+}
+@media only screen and (min-width: 500px) {
+  /* line 204, ../sass/style.sass */
+  .content {
+    min-width: 15em;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 500px) {
+  /* line 209, ../sass/style.sass */
+  .preview img {
+    display: none;
+  }
+
+  /* line 211, ../sass/style.sass */
+  .app {
+    margin: 0;
+  }
+}

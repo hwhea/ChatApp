@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <!-- External Links -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+
+    <!-- Meta -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scaleable=0">
+
+    <!-- Display stuff -->
+    <title>Web Chat</title>
+
+  </head>
+
+  <body>
+    <div class="illusion"></div>
+    <div class="app">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <h1>Team Chat</h1>
+        <p>This is a chat for the team </p>
+        <h2>07858244728</h2>
+        <input type="text" placeholder="name" class="nameTemp">
+      </div>
+      <div class="send">
+        <form action="" method="">
+          <textarea name="" class="tb-integrate" placeholder="Start by typing some text..."></textarea>
+          <div class="controls">
+            <a href="#" class="addlink">Add Link</a><br>
+            <input type="button" value="Send" class="send-btn" id="sendMessage">
+          </div>
+        </form>
+        <div class="notify">
+          Your message has been posted.
+        </div>
+      </div>
+      <div class="msg-push"></div>
+      <div class="messages-container">
+        <div class="cbox">
+          <div class="content">
+            <div class="pic">
+              <img src="img/avatar_1.jpg" alt="AV">
+            </div>
+            <p class="message">I'm glad you like them. I'm going out now to play some Pokemon Go.</p>
+          </div>
+          <p class="time">12:33pm</p>
+        </div>
+        <div class="cbox receive">
+          <div class="content">
+            <div class="pic">
+              <img src="img/avatar_2.jpg" alt="AV">
+            </div>
+            <p class="message">Hey! That design looks pretty good.</p>
+          </div>
+          <p class="time">12:33pm</p>
+        </div>
+        <div class="cbox file">
+          <div class="content">
+            <div class="pic">
+              <img src="img/avatar_1.jpg" alt="AV">
+            </div>
+            <p class="message">
+              I just came up with a new website landing page for the new show you have coming up.
+            </p>
+            <div class="preview">
+              <img src="img/preview.png" alt="">
+            </div>
+            <a href="#" class="view" url="http://i.imgur.com/iwBgy3z.png"><img src="img/svg/view.svg" alt="">Open File</a>
+          </div>
+          <p class="time">12:33pm</p>
+        </div>
+      </div>
+    </div>
+    <div class="popup">This shouldn't show.</div>
+    <audio>
+      <source src="audio/pop.mp3"></source>
+    </audio>
+  </body>
+  <script src="http://178.62.77.130:8080/socket.io/socket.io.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+
+  </script>
+</html>
